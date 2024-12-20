@@ -1,0 +1,17 @@
+HTTrack3.49-2+htsswf+htsjava launched on Thu, 11 Jul 2024 21:27:20 at https://digitalinfinityservices.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://digitalinfinityservices.com/ -O1 "C:\My Web Sites\Digital Infinity Services" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+21:29:18	Error: 	"Not Found" (404) at link https://digitalinfinityservices.com/images/2.jpg (from https://digitalinfinityservices.com/)
+21:29:18	Error: 	"Not Found" (404) at link https://digitalinfinityservices.com/fonts/helena/Helena (from https://digitalinfinityservices.com/css/main.css)
+21:29:18	Error: 	"Not Found" (404) at link https://digitalinfinityservices.com/script.js (from https://digitalinfinityservices.com/portfolio)
+21:29:18	Error: 	"Not Found" (404) at link https://digitalinfinityservices.com/images/pack-livechat.png (from https://digitalinfinityservices.com/packages)
+21:29:18	Error: 	"Not Found" (404) at link https://digitalinfinityservices.com/images/comboPrice-bg.jpg (from https://digitalinfinityservices.com/packages)
+21:29:18	Error: 	"Not Found" (404) at link https://digitalinfinityservices.com/images/off.png (from https://digitalinfinityservices.com/packages)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 58 seconds : 267 links scanned, 260 files written (145839584 bytes overall) [143678278 bytes received at 1217612 bytes/sec], 3678460 bytes transferred using HTTP compression in 99 files, ratio 37%, 7.8 requests per connection
+(6 errors, 0 warnings, 0 messages)
