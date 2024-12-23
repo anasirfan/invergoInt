@@ -1499,7 +1499,7 @@ body{
   display: contents;
 }
 .header__letter img{
-  width: 15vh;
+  width: 25vh;
 }
 .header__right {
     /* width: calc(100% - 36.927vw); */
