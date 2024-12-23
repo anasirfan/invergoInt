@@ -2464,8 +2464,8 @@ button:hover .icon-container .icon--right {
 .purp{background: rgb(130, 35, 94)!important;}
 .bgblue{background: rgb(92, 139, 179);}
 .bgtitle{background: #004170;}
-.bgbrownT{background: #812b2b;}
-.bgbrown{background: #572929;}
+.bgbrown{background: #2b124c;}
+.bgbrownT{background: #654f6c;}
 .contacts__copyright{
   margin-top: 20px;
 }
@@ -3077,7 +3077,7 @@ span.fade-out.main-btn-circle {
 }
 
 .contact-section {
-    background: #018abd;
+    background: linear-gradient(to right, #018abd, #2a4dbd);
     color: #ffffff;
 }
 
@@ -3135,4 +3135,43 @@ span.fade-out.main-btn-circle {
 .sticky-title.lpurp div,
 .sticky-title.lpurp ul li div {
     color: #ffffff !important;
+}
+
+.contacts__copyright {
+  margin-top: 20px;
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+.contacts__form {
+  margin-top: 7.61905vh;
+}
+
+.contact-section {
+  background: linear-gradient(to right, #018abd, #2a4dbd);
+  padding: 60px 0;
+}
+
+.contact-section h2,
+.contact-section p,
+.contact-section label {
+  color: #ffffff;
+}
+
+.contact-section .form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.contact-section .btn {
+  background-color: #152865;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.contact-section .btn:hover {
+  background-color: #223f9b;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
 }
