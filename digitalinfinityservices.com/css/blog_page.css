@@ -514,15 +514,32 @@ section.has-con-serv .row {
 	font-size: 0 ;
 	border: 0 ;
 }
-.db{
-	background-image: url(../img/dg.png);
-	animation: animate-background linear 15s infinite;
+.db {
+    position: relative;
     background-attachment: fixed;
+    overflow: hidden; /* Ensure ::before stays contained */
 }
+
+.db::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/dg.png);
+    background-size: cover;
+    background-position: 0px 0px; /* Start position */
+    opacity: 0.1; /* Adjust the opacity */
+    z-index: -1; /* Keep it behind the content */
+    animation: animate-background linear 15s infinite; /* Move animation here */
+}
+
 @keyframes animate-background {
-	from { background-position: 0px 0px; } 
-	to { background-position: -300px 300px; }
+    from { background-position: 0px 0px; } 
+    to { background-position: -300px 300px; }
 }
+
 .blog_page{
 	background-image: url(../img/dg.png);
 	animation: animate-background linear 15s infinite;

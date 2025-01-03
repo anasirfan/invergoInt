@@ -1641,8 +1641,8 @@ body{
   .ph img{
     
     width: 100vh;
-    background-color: #010508;
-    border-radius: 100vh;
+    /* background-color: #010508; */
+    /* border-radius: 100vh; */
   }
   .inph1 {
     position: absolute;
