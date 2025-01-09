@@ -1499,7 +1499,8 @@ body{
   display: contents;
 }
 .header__letter img{
-  width: 25vh;
+  width: 35vh;
+  padding-top: 15px;
 }
 .header__right {
     /* width: calc(100% - 36.927vw); */
