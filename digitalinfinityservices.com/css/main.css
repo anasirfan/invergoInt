@@ -760,6 +760,7 @@ display: flex;
       -ms-flex-negative: 0;
           flex-shrink: 0; }
     .home-page .content__menu {
+      font-family: 'sans-sarif';
       list-style: none;
       margin-top: 1.82292vw;
       margin-left: -1.14583vw;
@@ -772,7 +773,7 @@ display: flex;
       .home-page .content__menu li {
         font-size: 1.14583vw;
         line-height: 160%;
-        text-transform: uppercase;
+        
         border-top: 1px solid #ffffff;
         border-bottom: 1px solid #ffffff;
         display: -webkit-box;
@@ -3177,4 +3178,11 @@ span.fade-out.main-btn-circle {
   background-color: #223f9b;
   transform: translateY(-2px);
   transition: all 0.3s ease;
+}
+
+
+.homepage__powered {
+  font-size: 13px;
+  padding: 2px 25px;
+  color : gray
 }
