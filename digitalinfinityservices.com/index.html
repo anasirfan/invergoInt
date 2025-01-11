@@ -29,6 +29,13 @@
     <script src="../cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
     <link rel="stylesheet" href="../cdn.jsdelivr.net/npm/swiper%4011/swiper-bundle.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("1PVK2UiO9jFBli1m5");
+        })();
+    </script>
+
     <style>
         .swiper {
             cursor: grab !important;
@@ -3589,31 +3596,24 @@
 
                                 </div>
                                 <!--  -->
-                                <form class="content__contacts contacts__form just-center">
-                                    <!-- <div class="content__brief">
-                      <div class="content__brief-title">
-                        <label class="input-file">
-                          <input type="file" name="file" id="brief"><span>send a brief</span>
-                        </label>
-                      </div>
-                      <div class="content__brief-text small">I recommend filling out a brief to assess the cost of the project. <label for="brief">Brief</label></div>
-                    </div> -->
+                                <div  class="content__contacts contacts__form just-center">
+
                                     <div class="content__form">
                                         <label class="content__form-input">
-                                            <input type="text" name="name"><span
+                                            <input type="text" name="name" id="name"><span
                                                 class="content__form-placeholder">name</span>
                                         </label>
                                         <label class="content__form-input">
-                                            <input type="email" name="emal" required=""><span
+                                            <input type="email" name="email" id="email" required><span
                                                 class="content__form-placeholder">EMAIL *</span>
                                         </label>
                                         <label class="content__form-input">
-                                            <input type="text" name="msg" required=""><span
+                                            <input type="text" name="message" id="message" required><span
                                                 class="content__form-placeholder">MESSAGE *</span>
                                         </label>
 
                                         <div class="content__form-btn">
-                                            <button class=" bg-btn" type="submit">
+                                            <button class=" bg-btn" onclick="sendMail()">
                                                 <style type="text/css">
                                                     .bg-btn {
                                                         background-color: #0F0F33 !important;
@@ -3637,7 +3637,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -3663,6 +3663,30 @@
             //   mousewheel: true,
             //   keyboard: true,
         });
+    </script>
+    <script>
+        function sendMail() {
+            var params = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value,
+            };
+
+            const serviceID = "service_esodozr";
+            const templateID = "template_ev1047e";
+
+            emailjs.send(serviceID, templateID, params)
+                .then(res => {
+                    document.getElementById("name").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("message").value = "";
+                    console.log(res);
+                    alert("Your message sent successfully!!")
+
+                })
+                .catch(err => console.log(err));
+
+        }
     </script>
     <script>
         let elementsCC = document.querySelectorAll('.origin-center');
