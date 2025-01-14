@@ -145,36 +145,101 @@
             }
         }
 
-        #preloader {
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 999;
-            background: #1C1C1C;
-            background: linear-gradient(to right, rgba(36, 31, 31, 1) 0%, rgba(36, 31, 31, 1) 32%, rgb(0, 0, 0) 100%);
-        }
+       /* Preloader styles remain the same */
+#preloader {
+    /* width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: #1C1C1C;
+     */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: #18104f; */
+    background: linear-gradient(to right, rgb(35, 6, 58) 0%, rgba(36, 31, 31, 1) 32%, rgb(36, 8, 70) 100%);
+    display: flex
+;
+transition: opacity 0.8s ease-out, visibility 0s 0.8s;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
 
-        .loader {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            height: 10rem;
-            width: 10rem;
-            transform: translateX(-50%) translateY(-50%);
-        }
+
+}
+
+.loader img{
+    animation: zoom 2s linear;
+
+}
+
+@keyframes zoom { 
+
+    0% {
+        transform: scale(0.6);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+/* Loader animation for scaling and fading
+@keyframes scaleUpFade {
+    0% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+    25% {
+        transform: scale(1.7);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(2.1);
+        opacity: 0.7;
+    }
+    75% {
+        transform: scale(2.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.1);
+        opacity: 0.5;
+    }
+}
+
+/* Loader class with animation */
+/* .loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 20rem;
+    width: 20rem;
+    transform: translate(-50%, -50%);
+    animation: scaleUpFade 3s cubic-bezier(0.9, 0.24, 0.62, 0.79) infinite;
+} */
+
+/* Logo container styling */
+/* .logo-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+} */ */
+
 
         .loader>.circle {
             position: absolute;
             height: inherit;
             width: inherit;
-            background: #6449B6;
+            /* background: #6449B6; */
+            /* background: url('/img/logo-head.png') repeat scroll 0; */
             border-radius: 0;
-            animation: animate-circle 2s cubic-bezier(.9, .24, .62, .79) infinite;
         }
 
-        .loader>.circle:nth-of-type(1) {
+        /* .loader>.circle:nth-of-type(1) {
             animation-delay: 0s;
         }
 
@@ -184,16 +249,19 @@
 
         .loader>.circle:nth-of-type(3) {
             animation-delay: calc(2s / -6);
-        }
+        } */
     </style>
 </head>
 
 <body>
     <div id="preloader">
-        <div class="loader">
+        <!-- <div class="loader">
             <div class="circle"></div>
             <div class="circle"></div>
             <div class="circle"></div>
+        </div> -->
+        <div class="logo-container loader">
+            <img src="img/logo-head.png" alt="Logo">
         </div>
     </div>
     <main class="main main--home" style="opacity:0">
@@ -3165,7 +3233,7 @@
                                     <div class="h1">+250</div>
                                     <div class="h1">happy</div>
                                     <div class="h1">clients</div>
-                                    <div class="small">Our clients love what we do</div>
+                                    <div class="large">Our clients love what we do</div>
                                 </div>
                                 <div class="testimonials__clients just-center">
                                     <div class="testimonials__client"><img src="img/rank1.png" alt=""></div>
@@ -3432,7 +3500,7 @@
                                 <div class="content__title">
                                     <div class="h1">our</div>
                                     <div class="h1">portfolio</div>
-                                    <div class="small">Every project is our pride</div>
+                                    <div class="large">Every project is our pride</div>
                                 </div>
 
                                 <div class="content__btn-block">
@@ -3539,7 +3607,7 @@
                             <div class="content__left">
                                 <div class="content__title">
                                     <div class="h1">Hire Us</div>
-                                    <div class="small">Need a quick fix?</div>
+                                    <div class="large">Need a quick fix?</div>
                                 </div>
                                 <ul class="content__menu contacts__menu">
                                     <li class="active"><a class="noicon" href="mailto:invergodesign@gmail.com">Mail :
@@ -3548,9 +3616,11 @@
                                         <a class="noicon" href="skype:live:.cid.92b744a5e8f02370?chat">Skype : InverGo
                                             Design</a>
                                     </li>
-                                    <li class="active"><a class="noicon" href="tel:9729542351">Call : +92 (330) 224-2165
-                                        </a><br><br><a class="noicon" href="tel:923302242165">+92 (330) 224-2165 </a>
-                                    </li>
+                                    <li class="active">
+                                        <a class="noicon" href="tel:13322494910">Call : +1 (332) 249-4910 </a>
+                                     <!-- <br></br> -->
+                                     <a class="noicon" href="tel:923302242165"> +92 (330) 224-2165 </a>
+                                     </li>
                                     <li class="active"><a class="noicon" href="javascript:;">Address : Office # 503,
                                             Fifth floor, Fortune Center, Main Shahrah-e-Faisal, Karachi, Pakistan</a>
                                     </li>
